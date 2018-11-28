@@ -55,9 +55,9 @@ if __name__ == "__main__":
     requiredNamed.add_argument('-t', '--target', help='Merged TIFF file to be created', required=True)
     args = parser.parse_args()
     if len(args.files) == 1:
-        args.files = glob(args.files[0]
+        args.files = glob(args.files[0])
     if args.sort:
-        files = sorted(args.files),key=lambda f: int(re.findall(r'\d+',f)[-1]))
+        files = sorted(args.files,key=lambda f: int(re.findall(r'\d+',f)[-1]))
     else:
         files = args.files
     crop = None
