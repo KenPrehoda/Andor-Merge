@@ -71,5 +71,6 @@ if __name__ == "__main__":
             print('Incorrect crop argument')
             sys.exit(1)
         print(f'Cropping to {crop[0]},{crop[1]} X {crop[2]},{crop[3]}')
+    print(f'Preparing to process {len(files)} files...')
     process_files(files,args.target,crop,args.split)
     
